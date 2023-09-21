@@ -29,6 +29,15 @@ import "./Home.css"
         setTaskList([... taskList , obj])
     }
 
+    const removeTaskFromList = (obj) =>{
+        const index = taskList.indexOf(obj);
+
+        const tempArray = taskList;
+        tempArray.splice(index, 1);
+
+        setTaskList([...tempArray])
+    }
+
 
     return(
         <div className='container'>
@@ -42,14 +51,16 @@ import "./Home.css"
                     const { id, title,description,priority} = taskItem;
 
                     return <Task id={id}
-                     title={title}
-                      description={description}
-                       priority={priority}/>
+                                 title={title}
+                                 description={description}
+                                 priority={priority}
+                                 key={index}
+                                 removeTaskFromList={removeTaskFromList}
+                                 obj={taskItem}
+                                 />
 
                 })
              }
-            
-
             </div>
 
             <div>
