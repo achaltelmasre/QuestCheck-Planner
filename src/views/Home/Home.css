@@ -6,7 +6,7 @@
 }
 .app-title{
     text-align: center;
-    background-color: #b380ff;
+    background-color: #0b0497;
     width: 400px;
     padding: 10px 50px;
     display: block;
@@ -33,7 +33,7 @@
     margin: 30px 10px;
 }
 .btn-add-task{
-    background-color: blueviolet;
+    background-color: #0b0497;
     color: #fff;
     border-radius: 30px;
     padding: 15px 30px;

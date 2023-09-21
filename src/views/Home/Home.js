@@ -9,26 +9,9 @@ import "./Home.css"
             id:1,
             title: 'submit assignment',
             description: 'nahi to gali padegi',
-            priority: 'high'
+            priority: 'High'
         },
-        {
-            id:2,
-            title: 'submit assignment',
-            description: 'nahi to gali padegi',
-            priority: 'high'
-        },
-        {
-            id:3,
-            title: 'submit assignment',
-            description: 'nahi to gali padegi',
-            priority: 'high'
-        },
-        {
-            id:4,
-            title: 'submit assignment',
-            description: 'nahi to gali padegi',
-            priority: 'high'
-        }
+       
     ] )
 
     const [title,setTitle] = useState('');
@@ -49,7 +32,7 @@ import "./Home.css"
 
     return(
         <div className='container'>
-           <h1 className='app-title'>To Do List</h1>
+           <h1 className='app-title'>Quest-Check  Planner 📒</h1>
 
            <div className='todo-flex-container'>
             <div>
@@ -57,8 +40,11 @@ import "./Home.css"
              {
                 taskList.map((taskItem, index)=>{
                     const { id, title,description,priority} = taskItem;
-                    return <Task id={id} title={title} description=
-                    {description} priority={priority}/>
+
+                    return <Task id={id}
+                     title={title}
+                      description={description}
+                       priority={priority}/>
 
                 })
              }
