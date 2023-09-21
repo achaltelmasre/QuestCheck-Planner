@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Task from '../../component/Task/Task'
 import "./Home.css"
 
@@ -18,6 +18,16 @@ import "./Home.css"
     const [description ,setDescription] = useState('');
     const [priority , setPriority ] = useState('');
 
+   useEffect(() =>{
+    const list = JSON.parse(localStorage.getItem('Quest'));
+    setTaskList(list)
+   }, {})
+
+    const saveListToLocalStorage = (tasks) =>{
+        localStorage.setItem('Quest',JSON.stringify(tasks))
+
+    }
+
     const addTaskToList = () => {
         const randomId = Math.floor(Math.random()*1000); 
         const obj = {
@@ -26,7 +36,16 @@ import "./Home.css"
             description: description,
             priority:priority
         }
-        setTaskList([... taskList , obj])
+
+        const newTaskList = [...taskList, obj]
+
+        setTaskList(newTaskList)
+
+        setTitle(' ');
+        setDescription(' ');
+        setPriority(' ');
+
+        saveListToLocalStorage(newTaskList);
     }
 
     const removeTaskFromList = (obj) =>{
@@ -36,8 +55,9 @@ import "./Home.css"
         tempArray.splice(index, 1);
 
         setTaskList([...tempArray])
-    }
 
+        saveListToLocalStorage(tempArray);
+    }
 
     return(
         <div className='container'>
