@@ -1,14 +1,16 @@
 .container{
     padding: 10px;
     margin: 0;
-   
     min-height: 100vh;
 }
 .app-title{
     text-align: center;
-    background-color: #0b0497;
-    width: 400px;
-    padding: 10px 50px;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    
+    width: 100;
+    font-size: 40px;
+    padding: 10px ;
     display: block;
     margin: 10px auto;
     border-radius: 20px;
@@ -21,23 +23,41 @@
 }
 .text-center{
     text-align: center;
+    font-size: 30px;
 }
 
 .task-input{
     display: block;
-    width: 300px;
+    width: 350px;
     font-size: 18px;
-    border: 1px solide black;
+    border: none;
     border-radius: 5px;
     padding: 10px;
     margin: 30px 10px;
 }
 .btn-add-task{
-    background-color: #0b0497;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    
     color: #fff;
     border-radius: 30px;
-    padding: 15px 30px;
+    padding: 10px 50px;
     border: none;
+    font-size: 20px;
     display: block;
     margin:20px auto ;
+}
+.btn-add-task:hover{
+    box-shadow: 0 0 5px 1px #031d86 ;
+}
+.tasks-container{
+   
+   height: 400px;
+    overflow-y: scroll;
+}
+.add-task-form-container{
+    padding: 10px;
+
+   box-shadow: 0 0 5px 1px rgb(7, 102, 175);
+   border-radius: 20px;
 }

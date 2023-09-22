@@ -4,9 +4,9 @@
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    box-shadow: 0 2px 4px  blue;
+    box-shadow: 0 2px 4px  #046f95;
     position: relative;
-    background-color: rgb(224, 225, 244);
+    background-color: white;
 
 
 }
@@ -22,24 +22,25 @@
        position: absolute;
        right: 0;
        top: 0;
-       background-color: #f9371e;
+       background-color: #046f95;
        color: white;
        border-radius: 0 10px 0 0;
        padding: 2px;
        width:100px ;
+       font-size: 20px;
 }
 .task-delete-icon{
     position: absolute;
     bottom: 5px;
     right:50px;
     cursor: pointer;
-    background-color: rgb(68, 19, 19);
+    background-color: rgb(13, 109, 173);
 }
 .task-edit-icon{
     position: absolute;
     bottom: 5px;
     right:5px;
     cursor: pointer;
-    background-color: rgb(68, 19, 19);
+    background-color: rgb(13, 109, 173);
 
 }
