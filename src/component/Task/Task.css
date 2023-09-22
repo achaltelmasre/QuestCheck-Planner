@@ -31,6 +31,13 @@
 .task-delete-icon{
     position: absolute;
     bottom: 5px;
+    right:50px;
+    cursor: pointer;
+    background-color: rgb(68, 19, 19);
+}
+.task-edit-icon{
+    position: absolute;
+    bottom: 5px;
     right:5px;
     cursor: pointer;
     background-color: rgb(68, 19, 19);
