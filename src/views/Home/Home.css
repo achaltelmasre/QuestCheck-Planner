@@ -34,6 +34,11 @@
     border-radius: 5px;
     padding: 10px;
     margin: 30px 10px;
+    outline: none;
+}
+.task-input:hover{
+    border: 2px solid #0093E9;
+    outline: none;
 }
 .btn-add-task{
     background-color: #0093E9;
@@ -53,7 +58,10 @@
 .tasks-container{
    
    height: 400px;
-    overflow-y: scroll;
+    overflow-y: scroll; 
+}
+.tasks-container::-webkit-scrollbar{
+    width: 5px;
 }
 .add-task-form-container{
     padding: 10px;

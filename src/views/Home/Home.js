@@ -12,25 +12,22 @@ import "./Home.css"
             title: 'submit assignment',
             description: 'nahi to gali padegi',
             priority: 'High'
-        },
-       
+        }   
     ] )
 
     const [id, setId] = useState(0);
     const [title,setTitle] = useState('');
     const [description ,setDescription] = useState('');
     const [priority , setPriority ] = useState('');
-    const [isEdit , setIsEdit] =useState(false);
+    const [isEdit , setIsEdit] = useState(false);
 
 
    useEffect(() =>{
     const list = JSON.parse(localStorage.getItem('Quest'));
-    if(list && list.length>0){
+    if(list && list.length > 0){
         setTaskList(list)
     } 
-   }, {})
-
-
+   }, [])
     const clearInputFields = (task) => {
         setTitle(' ');
         setDescription(' ');
@@ -170,7 +167,7 @@ import "./Home.css"
 
             <div>
               <h2 className='text-center'>
-                {isEdit ? `update Task ${id}`: 'Add Task ➕'}
+                {isEdit ? `update plane `: 'Add plan ➕'}
                </h2>
               <div className='add-task-form-container'>
                 
